@@ -1,0 +1,58 @@
+#baner {
+    background-color: #5957a1;
+    text-align: center;
+    padding: 10px;
+    height: 70px;
+}
+
+#lewy {
+    float: left;
+    background-color: #bbadcd;
+    width: 65%;
+    height: 450px;
+}
+
+#prawy {
+    float: left;
+    background-color: #5957a1;
+    text-align: center;
+    width: 35%;
+    height: 450px;
+}
+
+footer {
+    clear: both;
+    background-color: #5957a1;
+    text-align: center;
+    height: 50px;
+}
+
+.kolumna {
+    width: 405px;
+}
+
+a {
+    color: yellow;
+}
+
+body {
+    font-family: arial;
+    color: white;
+}
+
+hr {
+    color: yellow;
+}
+
+ul {
+    list-style-type:square;
+    list-style-position: inside;
+}
+
+li {
+    color: yellow;
+}
+
+td {
+    border: 1px black dashed;
+}

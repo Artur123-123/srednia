@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Szkoła ponadgimnazjalna</title>
+</head>
+<body>
+    <div id="baner">
+        <h1>Projekt strony internetowej szkoły ponadgimnazjalnej</h1>
+    </div>
+    <div id="lewy">
+        <table>
+            <tr>
+                <td>Treść zapytania</td>
+                <td class="kolumna">Zrzut ekranu</td>
+            </tr>
+            <tr>
+                <td>INSERT INTO klasa VALUES (id=5, "nazwa=3a")</td>
+                <td class="kolumna"><img src="zap1.png" alt=""></td>
+            </tr>
+            <tr>
+                <td>SELECT klasa.nazwa, AVG(Srednia_ocen) FROM klasa, uczen WHERE uczen.id_klasy=klasa.id GROUP BY id_klasy</td>
+                <td class="kolumna"><img src="zap2.png" alt=""></td>
+            </tr>
+            <!-- <tr>
+                <td></td>
+                <td class="kolumna"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td class="kolumna"></td>
+            </tr> -->
+        </table>
+    </div>
+    <div id="prawy">
+        <h2>Do pobrania</h2>
+        <ul>
+            <li><a href="">zapytania SQL</a></li>
+            <li><a href="">baza danych</a></li>
+        </ul>
+        <hr>
+        <h3>Wyznaczanie najniższej średniej</h3>
+        <ul>
+            <li>Polak<input type="text" name="" id="polak"></li>
+            <li>Nowak<input type="text" name="" id="nowak"></li>
+            <li>Rysik<input type="text" name="" id="rysik"></li>
+        </ul>
+        <button onclick="pobieranie(value)">Wyznacz</button>
+        <h3>Najniższa średnia:</h3>
+        <p id="wynik"></p>
+    </div>
+    <footer>
+        <h3>stronę wykonał: 37237858</h3>
+    </footer>
+    <script>
+        function pobieranie() {
+            let polak = Number(document.getElementById('polak').value)
+            let nowak = Number(document.getElementById('nowak').value)
+            let rysik = Number(document.getElementById('rysik').value)
+            console.log(polak, nowak, rysik)
+            if(isNaN(polak) || isNaN(nowak) || isNaN(rysik) || polak == 0 || nowak == 0 || rysik == 0) {
+                alert('wpisz poprawne dane')
+            }
+            else {
+                if(polak < nowak) {
+                  if(polak < rysik) {
+                    document.getElementById('wynik').innerHTML = polak
+                  }
+                } 
+                else if(nowak < rysik) {
+                    document.getElementById('wynik').innerHTML = nowak
+                } 
+                else {
+                    document.getElementById('wynik').innerHTML = rysik
+                }
+            }
+        }
+
+    </script>
+</body>
+</html>
